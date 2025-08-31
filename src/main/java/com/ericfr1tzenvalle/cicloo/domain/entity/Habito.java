@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.ericfr1tzenvalle.cicloo.entity;
+package com.ericfr1tzenvalle.cicloo.domain.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

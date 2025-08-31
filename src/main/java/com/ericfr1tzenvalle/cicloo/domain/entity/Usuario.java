@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.ericfr1tzenvalle.cicloo.entity;
+package com.ericfr1tzenvalle.cicloo.domain.entity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -41,6 +41,10 @@ public class Usuario {
      * fetch = FetchType.LAZY: Os hábitos só serão carregados do banco quando forem explicitamente solicitados. É uma otimização importante.
      */
     @OneToMany(mappedBy = "usuarios", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    /**
+     * Em um relacionamento bidirecional (onde as duas classes se conhecem),
+     * o lado ...ToMany usa mappedBy e o lado ...ToOne usa @JoinColumn.
+     */
     private List<Habito> habitos = new ArrayList<>();
     
     
